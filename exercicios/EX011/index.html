@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon/html.ico" type="image/x-icon">
+    <title>Mídais em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>
+        Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador
+    </p>
+    <picture>
+        <!-- sempre respeitar a sequencia da imagem, sempre tem que ser a pequena encima de tudo e depois as maiores-->
+        <source media="(max-width: 750px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áduios em HTML5</p>
+    <audio src="midia/happy-mistake.mp3" controls autoplay></audio><!-- jeito simples de colocar o audio, mas fica meio limitado-->
+   
+    <audio preload="metadata" autoplay controls><!--jeito completo de por, por que vai ter todos os tipos de audio, ai o navegador carrega o que for melhor para ele-->
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg"><!--primeiro a carregar-->
+        <source src="midia/guanacast-33.ogg" type="audio/ogg"><!--segundo a carregar-->
+        <source src="midia/guanacast-33.wav" type="audio/wav"><!--terceiro a carregar, e WAV é muito pesado-->
+        <p>Infelizmente seu navegador nao consegue reproduzir áudio. <a href="midia/guanacast-33.mp3">Clique aqui para baiar os arquivo MP3</a></p><!--se nao carregar ai vai ter um link para baixar-->
+    </audio>
+</body>
+</html>
