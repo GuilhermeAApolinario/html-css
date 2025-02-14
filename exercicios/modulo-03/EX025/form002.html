@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TEste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário</label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="15" placeholder="Nome do usuário" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen">Senha:</label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="9" placeholder="Mínimo 8 letras" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <!-- autocomplete
+    Tem como deixar o formulario com preenchimento automático, nesse caso temos que colocar o autocomplete="on", e ir em cada input colocar autocomplete com cada um o seu valor se for Usuário username se for Senha usar current-password, ai nesse caso nesse comando vai pega os dados salvos no navegador
+    -->
+     <!-- required
+    O required é para obrigar que a pessoa coloca a user e a senha 
+    -->
+      <!-- maxlength e minlengeth
+    maxlength e minlengeth e onde colocando o maximo de caracteres para ter, e o mínimo e a quantidade minima que deve conter. Se nao colocar um minimo e nem maximo a pessoa pode colocar quantos ela quiser
+    -->
+    <!-- size e placeholder
+     size= e o tamanho da caixa
+     placeholder= é uma dica do que se pode estar colocando
+     -->
+</body>
+</html>
